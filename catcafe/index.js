@@ -1,26 +1,32 @@
 $(document).ready(function () {
-    let control1 = 0;
-    let control2 = 0;
+    function updateButtonText(buttonSelector, listSelector) {
+        if ($(listSelector).is(":visible")) {
+            $(buttonSelector).text("Ocultar");
+        } else {
+            $(buttonSelector).text("Mostrar");
+        }
+    }
+
+    updateButtonText("#btnCats", "#listCats");
+    updateButtonText("#btnMenu", "#listmenu");
+
     $("#btnCats").click(function () {
-		
-        if (control1 == 0) {
+        if ($("#listCats").is(":visible")) {
             $("#listCats").fadeOut();
-            control1++
+            $(this).text("Mostrar");
+        } else {
+            $("#listCats").fadeIn();
+            $(this).text("Ocultar");
         }
-        else if (control1 == 1) {
-            $("#listCats").fadeIn();  
-            control1 = 0;
-        }
-	});
+    });
+
     $("#btnMenu").click(function () {
-		
-        if (control2 == 0) {
+        if ($("#listmenu").is(":visible")) {
             $("#listmenu").fadeOut();
-            control2++
+            $(this).text("Mostrar");
+        } else {
+            $("#listmenu").fadeIn();
+            $(this).text("Ocultar");
         }
-        else if (control2 == 1) {
-            $("#listmenu").fadeIn();  
-            control2 = 0;
-        }
-	});
+    });
 });

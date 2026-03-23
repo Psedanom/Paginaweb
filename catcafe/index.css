@@ -1,7 +1,26 @@
 body {
     color: #2f2f2f;
     background-color: rgb(232, 226, 205);
+    /* cursor: url("./assets/arrow.cur"), auto; */
 }
+/* 
+
+button,
+[role="button"],
+
+
+.btn,
+.nav-link,
+.dropdown-item {
+    cursor: url("./assets/link.cur"), pointer !important;
+}
+
+
+
+
+ */
+
+
 
 .page {
     max-width: 1100px;
@@ -33,3 +52,4 @@ body {
     padding-left: 1.1rem;
     line-height: 1.9;
 }
+
